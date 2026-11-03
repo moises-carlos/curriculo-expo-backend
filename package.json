@@ -1,0 +1,27 @@
+{
+  "name": "curriculo-expo-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --dns-result-order=ipv4first dist/index.js",
+    "dev": "tsx --dns-result-order=ipv4first src/index.ts",
+    "test:db": "tsx --dns-result-order=ipv4first src/index.ts",
+    "test:crud": "tsx --dns-result-order=ipv4first src/test-api.ts"
+  },
+  "dependencies": {
+    "@neon/config": "^1.10.1",
+    "@neon/env": "^1.6.9",
+    "@neondatabase/serverless": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

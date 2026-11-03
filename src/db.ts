@@ -5,8 +5,9 @@ import dotenv from "dotenv";
 // Força o Node.js a priorizar IPv4 para evitar ETIMEDOUT em redes com IPv6 inacessível
 dns.setDefaultResultOrder("ipv4first");
 
-// Carrega as variáveis do .env.local
+// Carrega as variáveis de ambiente (.env.local, .env ou injetadas pela Vercel)
 dotenv.config({ path: ".env.local" });
+dotenv.config();
 
 const connectionString = process.env.DATABASE_URL;
 
